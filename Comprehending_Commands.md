@@ -53,7 +53,7 @@ I started with the command  'find / -name flag' to search the whole filesystem f
 /usr/local/share/radare2/5.9.5/flag
 /usr/local/lib/python3.8/dist-packages/pwnlib/flag
 /usr/share/racket/pkgs/racket-index/scribblings/main/flag
-/home/hacker/flag
+/home/hacker/flag 
 /opt/pwndbg/.venv/lib/python3.8/site-packages/pwnlib/flag
 /opt/radare2/libr/flag
 /nix/store/pmvk2bk4p550w182rjfm529kfqddnvh3-python3.11-pwntools-4.12.0/lib/python3.11/site-packages/pwnlib/flag
@@ -65,5 +65,10 @@ pwn.college{0kuqioFBsjAp5Tjs9aWaqLUGI-j.dJzM4QDL1YTN0czW}hacker@commands~finding
 
 Flag link: pwn.college{0kuqioFBsjAp5Tjs9aWaqLUGI-j.dJzM4QDL1YTN0czW}
 ## Challenge 12: Linking Files
+I started with the command 'ln -s /flag /home/hacker/not-the-flag' to create a symbolic link that points to the flag. Then I typed /challenge/catflag wich gave the following prompt:
+'''
+About to read out the /home/hacker/not-the-flag file!
+'''
+as it was read from the symlink instead of the original file. Then the flag was given.
 
 Flag link: pwn.college{owi-HXf8EPOOG7xRQjKRISPiirT.dlTM1UDL1YTN0czW}
