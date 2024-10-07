@@ -3,6 +3,9 @@
 This challenge required us to use this input redirection to write the word PWN (all uppercase) to the filename COLLEGE (all uppercase). I ran the command `echo PWN > COLLEGE` to redirect the word PWN to the file COLLEGE. This step yielded the flag.
 
 Flag link: pwn.college{w2ORS7e5fhxEIc3QG_YhFAWed72.dRjN1QDL1YTN0czW}
+## Challenge 2:
+
+Flag link:
 ## Challenge 3:
 
 Flag link:
