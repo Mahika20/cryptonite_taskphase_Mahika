@@ -4,8 +4,8 @@ This challenge required us to use this input redirection to write the word PWN (
 
 Flag link: pwn.college{w2ORS7e5fhxEIc3QG_YhFAWed72.dRjN1QDL1YTN0czW}
 ## Challenge 2:
-
-Flag link:
+This challenge required us to redirect the output of /challenge/run to the file myflag. So, I ran the command `/challenge/run >  myflag` which
+Flag link:  pwn.college{kR-3wBNCB2gOgyb_cnbNYVo2G0v.dVjN1QDL1YTN0czW}
 ## Challenge 3:
 
 Flag link:
