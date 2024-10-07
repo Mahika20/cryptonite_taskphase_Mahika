@@ -1,4 +1,4 @@
-# Module 5:File_Globbing
+# Module 5:File_Globbing 
 ## Challenge 1: Matching with *
 This challenge required us to change our directory to /challenge, but use globbing to keep the argument we pass to cd to at most four characters.
 So, I ran the command `cd /ch*` as ch* would match the pattern of challenge. Then I ran the command `/challenge/run` to retrieve the flag.
