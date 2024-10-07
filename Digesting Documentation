@@ -82,13 +82,39 @@ DESCRIPTION
        --wnuajd NUM
               print the flag if NUM is 869
 ```
-The command --wnuajd NUM would print the flag. So I ran the command '/challenge/challenge --wnuajd 869' and received the flag.
+The command --wnuajd NUM would print the flag. So I ran the command `/challenge/challenge --wnuajd 869` and received the flag.
 
 Flag link:pwn.college{wnuWRVTT8aDYATIHK6943MjUBHE.dZTM4QDL1YTN0czW}
 ## Challenge 6: Helpful programs
-This challenge required us to read a program's documentation with --help. I ran the command `/challenge/challenge --help`
+This challenge required us to read a program's documentation with --help. I ran the command `/challenge/challenge --help`. The output provided the arguments that could be passed to the program and other information:
+```
+usage: a challenge to make you ask for help [-h] [--fortune] [-v] [-g GIVE_THE_FLAG] [-p]
 
-Flag link:
-## Challenge 7:
+optional arguments:
+  -h, --help            show this help message and exit
+  --fortune             read your fortune
+  -v, --version         get the version number
+  -g GIVE_THE_FLAG, --give-the-flag GIVE_THE_FLAG
+                        get the flag, if given the correct value
+  -p, --print-value     print the value that will cause the -g option to give you the flag
+```
+I ran the command `/challenge/challenge -p` as the argument -p would get the value for -g GIVE_THE_FLAG argument. The output was `The secret value is: 127`. So, I ran the command `/challenge/challenge -g 127` which yielded the flag.
 
-Flag link:
+Flag link: pwn.college{s12D-7junUyXzz5nUOAreIy5rtC.ddjM4QDL1YTN0czW}
+## Challenge 7: Help for builtins
+I started off with the command `help challenge` to get help for the shell builtin challenge command. It gave the following output:
+```
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
+    
+    Options:
+      --fortune		display a fortune
+      --version		display the version
+      --secret VALUE	prints the flag, if VALUE is correct
+
+    You must be sure to provide the right value to --secret. That value
+    is "w4OqU8HF".
+```
+Here, the argument --secret VALUE	prints the flag. So, I ran the command `challenge --secret w4OqU8HF` to get the flag
+
+Flag link: pwn.college{w4OqU8HF5O51MVNV1yGMli-KqMX.dRTM5QDL1YTN0czW}
