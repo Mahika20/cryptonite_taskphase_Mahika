@@ -1,2 +1,22 @@
-# Module 3: Digesting Documentation
-## Challenge 1: 
+# Module 4: Digesting Documentation
+## Challenge 1: Learning from Documentation
+In this challenge, we were required to invoke /challenge/challenge with the argument --giveflag to get the flag. 
+'''
+hacker@man~learning-from-documentation:~$ /challenge/challenge --giveflag
+Correct argument! Here is your flag:
+pwn.college{kaXvcIQ2V8i9mkasEoELc7XyGNK.dRjM5QDL1YTN0czW}
+'''
+
+Flag link: pwn.college{kaXvcIQ2V8i9mkasEoELc7XyGNK.dRjM5QDL1YTN0czW}
+## Challenge 2: Learning complex usage
+This challenge required us to retrieve the flag using the /challenge/challenge command. I first tried the command '/challenge/challenge -- printfile /challenge/DESCRIPTION.md' to get the description of the level then I ran the command '/challenge/challenge --printfile /flag' to print the contents of the flag file.
+'''
+hacker@man~learning-complex-usage:~$ /challenge/challenge --printfile /flag
+Correct argument! Here is the /flag file:
+pwn.college{kKSK5MATMaCJfrByiit9y8qmGfc.dVjM5QDL1YTN0czW}
+'''
+Flag link: pwn.college{kKSK5MATMaCJfrByiit9y8qmGfc.dVjM5QDL1YTN0czW}
+## Challenge 3: Reading Manuals
+
+
+Flag link: pwn.college{45C91yiP-R6EH12M1BUnK-sE8O1.dRTM4QDL1YTN0czW}
