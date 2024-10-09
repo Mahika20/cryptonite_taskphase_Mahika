@@ -15,9 +15,10 @@ hacker@man~learning-complex-usage:~$ /challenge/challenge --printfile /flag
 Correct argument! Here is the /flag file:
 pwn.college{kKSK5MATMaCJfrByiit9y8qmGfc.dVjM5QDL1YTN0czW}
 ```
+
 Flag link: pwn.college{kKSK5MATMaCJfrByiit9y8qmGfc.dVjM5QDL1YTN0czW}
 ## Challenge 3: Reading Manuals
-This level required us to  find a secret option in the challenge and use it to print the flag. I ran the command 'man challenge' to view the manual of challenge. It gave the following prompt:
+This level required us to  find a secret option in the challenge and use it to print the flag. I ran the command `man challenge` to view the manual of challenge. It gave the following prompt:
 ```
 CHALLENGE(1)                             Challenge Commands                             CHALLENGE(1)
 
@@ -42,11 +43,11 @@ DESCRIPTION
 AUTHOR
        Written by Zardus.
 ```
-Then I ran the command '/challenge/challenge --yinsdc 459' since according to the description given in the manual, the argument --yinsdc NUM would print the flag if NUM was 459. This yielded the flag.
+Then I ran the command '`/challenge/challenge --yinsdc 459` since according to the description given in the manual, the argument --yinsdc NUM would print the flag if NUM was 459. This yielded the flag.
 
 Flag link: pwn.college{45C91yiP-R6EH12M1BUnK-sE8O1.dRTM4QDL1YTN0czW}
 ## Challenge 4: Searching Manuals
-This challenge required us to search the flag in the challenge man page. I ran the command 'man challenge' to get the challenge manual. Once the manual was displayed, I searched for the flag file using '/file'. I went through the results using N to go to the previous results and n to check the next results. I found the argument which would give the flag: --rmj, and finally ran the command '/challenge/challenge --rmj'. This yileded the flag
+This challenge required us to search the flag in the challenge man page. I ran the command `man challenge` to get the challenge manual. Once the manual was displayed, I searched for the flag file using '/file'. I went through the results using N to go to the previous results and n to check the next results. I found the argument which would give the flag: --rmj, and finally ran the command `/challenge/challenge --rmj`. This yileded the flag
 
 Flag link: pwn.college{EkONHUEeOSeXGL3gomi_cbrKkWF.dVTM4QDL1YTN0czW}
 ## Challenge 5:  Seaching for manuals
@@ -60,12 +61,12 @@ SYNOPSIS
        man -l [man options] file ...
        man -w|-W [man options] page ...
 ```
-So, I ran the command 'man -k challenge' to display the manpages having the word challenge.
+So, I ran the command `man -k challenge` to display the manpages having the word challenge.
 ```
 hacker@man~searching-for-manuals:~$ man -k challenge
 wnuajdczab (1)       - print the flag!
 ```
-Then I ran the command 'man wnuajdczab' to get the manpage of wnuajdczab. It gave the following result:
+Then I ran the command `man wnuajdczab` to get the manpage of wnuajdczab. It gave the following result:
 ```
 SYNOPSIS
        challenge OPTION
