@@ -4,7 +4,7 @@ In this challenge, I had to use the cat command to read the flag in the home dir
 
 Flag link: pwn.college{siugmP07oFB48BuaRkyA36dZhj6.dFzN1QDL1YTN0czW}
 ## Challenge 2: Catting absolute paths
-For this challenge I used the command cat /flag to read the flag with cat at its absolute path /flag.
+For this challenge I used the command `cat /flag` to read the flag with cat at its absolute path /flag.
 
 Flag link: pwn.college{s6b4NWL7xNvwSPTA4Wu5FLObnls.dlTM5QDL1YTN0czW}
 ## Challenge 3: More catting practice
