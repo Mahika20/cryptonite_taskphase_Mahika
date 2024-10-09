@@ -110,10 +110,30 @@ pwn.college{k70fD8YIu5b0uOPmp04rT4MYnVj.dVDM5QDL1YTN0czW}
 ```
 
 Flag link: pwn.college{k70fD8YIu5b0uOPmp04rT4MYnVj.dVDM5QDL1YTN0czW}
-## Challenge 9:
+## Challenge 9: Duplicating piped data with tee
+This challenge required us to pipe /challenge/pwn into /challenge/college but first intercept the data to see what pwn needs. I ran the command
+`/challenge/pwn | tee flag | /challenge/college`. Here, I used tee to find what pwn needed and this gave the following output:
+```
+Processing...
+WARNING: you are overwriting file flag with tee's output...
+The input to 'college' does not contain the correct secret code! This code 
+should be provided by the 'pwn' command. HINT: use 'tee' to intercept the 
+output of 'pwn' and figure out what the code needs to be.
+hacker@piping~duplicating-piped-data-with-tee:~$ cat flag
+Usage: /challenge/pwn --secret [SECRET_ARG]
 
-Flag link:
-## Challenge 10:
+SECRET_ARG should be "EYpL4EC0"
+```
+Here the secret argument to be passed and onformation on how it was to be passed was provided. So, I ran the command `/challenge/pwn --secret EYpL4EC0| /challenge/college` to  pipe the output to /challenge/college. This gave the following output: 
+```
+Processing...
+Correct! Passing secret value to /challenge/college...
+Great job! Here is your flag:
+pwn.college{EYpL4EC09HM3LB2Smf_tE-s_eal.dFjM5QDL1YTN0czW}
+```
+
+Flag link: pwn.college{EYpL4EC09HM3LB2Smf_tE-s_eal.dFjM5QDL1YTN0czW}
+## Challenge 10: Writing to multiple programs
 This challenge required us to run the /challenge/hack command, and duplicate its output as input to both the /challenge/the and the /challenge/planet commands. So I ran the command `/challenge/hack | tee >( /challenge/the ) >( /challenge/planet )`  to redirect the output to the two commands simultaneously using process substitution. This step gave the following output: 
 ```
 This secret data must directly and simultaneously make it to /challenge/the and 
@@ -125,7 +145,7 @@ pwn.college{kqs94j-enKdo8_qQ7g5-yiF6W4A.dBDO0UDL1YTN0czW}
 ```
 Flag link: pwn.college{kqs94j-enKdo8_qQ7g5-yiF6W4A.dBDO0UDL1YTN0czW}
 
-## Challenge 11:
+## Challenge 11: Split-piping stderr and stdout
 This challenge required us to redirect hack's stderr to /challenge/the and redirect hack's stdout to /challenge/planet. To do so, I ran the command `/challenge/hack > >( /challenge/planet ) 2> >( /challenge/the )` 
 
 Flag link: pwn.college{IIg3db9yd67hxxSNNjsYqjs2YLx.dFDNwYDL1YTN0czW}
