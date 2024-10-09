@@ -163,6 +163,6 @@ pwn.college{kqs94j-enKdo8_qQ7g5-yiF6W4A.dBDO0UDL1YTN0czW}
 Flag link: pwn.college{kqs94j-enKdo8_qQ7g5-yiF6W4A.dBDO0UDL1YTN0czW}
 
 ## Challenge 11: Split-piping stderr and stdout
-This challenge required us to redirect hack's stderr to /challenge/the and redirect hack's stdout to /challenge/planet. To do so, I ran the command `/challenge/hack > >( /challenge/planet ) 2> >( /challenge/the )` 
+This challenge required us to redirect hack's stderr to /challenge/the and redirect hack's stdout to /challenge/planet. To do so, I ran the command `/challenge/hack > >( /challenge/planet ) 2> >( /challenge/the )` which provided the flag.
 
 Flag link: pwn.college{IIg3db9yd67hxxSNNjsYqjs2YLx.dFDNwYDL1YTN0czW}
