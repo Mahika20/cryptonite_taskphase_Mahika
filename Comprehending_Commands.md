@@ -1,4 +1,4 @@
-# Module: 3
+# Module 3: Comprehending Commands
 ## Challenge 1: Cat not the pet but the command
 In this challenge, I had to use the cat command to read the flag in the home directory. Since I was already in the home directory, I ran the command `cat flag` and received the flag.
 
@@ -14,15 +14,19 @@ to retrieve the flag.
 
 Flag link: pwn.college{ohVn40PHnaHJlh3OAoi2RACmSKX.dBjM5QDL1YTN0czW}
 ## Challenge 4: Grepping for a needle in a haystack
+This challenge required us to search the file for lines of text containing the substring 'pwn.college' and print them. So, I ran the command `grep pwn.college /challenge/data.txt` to search for the flag. This step yielded the flag.
 
 Flag link: pwn.college{YTpYgDDgWmK0YmZzIcRTyHWbTuh.ddTM4QDL1YTN0czW}
 ## Challenge 5: Listing files
+This challenge required us to list the files in /challenge to find /challenge/run. So I ran the command `ls /challenge` to list the files in /challenge. It listed the following files: `2462-renamed-run-4017 DESCRIPTION. md`. I ran the command `cd /challenge` to access the challenge directory. Then I ran the command `/challenge/2462-renamed-run-4017` to get flag.
 
 Flag link: pwn.college{kWsB9aIEuaOLmi8HDOhkXkqhQL7.dhjM4QDL1YTN0czW}
 ## Challenge 6:  Touching Files
+Thsi challenge required us to create two files: /tmp/pwn and /tmp/college, and run /challenge/run. I ran the command `cd /tmp` to change the directory to /tmp. Then I ran the command `touch /tmp/college` followed by `touch /tmp/pwn` to create the files in tmp. Then I ran the command `\challenge\run` to get the flag.
 
 Flag link: pwn.college{sx7Cdb_dkojRsuBDZmqXoP3I5o0.dBzM4QDL1YTN0czW}
 ## Challenge 7: Removing Files
+This challenge required us to delete the delete_me file in our home directory, then run /challenge/check. I ran the command `rm delete_me` to remove the file. Then I changed the directory to challenge by `cd /challenge` and finally ran the command `/challenge/check` which checked the removal and provided the flag.
 
 Flag link: pwn.college{w9CmldOpcA3hxh0z1gKtaZjLwdg.dZTOwUDL1YTN0czW}
 ## Challenge 8: Hidden files
