@@ -9,11 +9,11 @@ This challenge required us to invoke the run challenge program which is in the c
 Flag link: pwn.college{o6Kd9Hu1oErpM1lTiRu0t89lgyt.dVDN1QDL1YTN0czW}
 ## Challenge 3: Position thy self
 The challenge required us to execute the /challenge/run program from a specific path. Initially, I ran the program cd /challenge to access the challenge directory. Then I ran the /challenge/run program to check the specific path. It resulted in the following prompt: 
-'''
+```
 Incorrect...
 You are not currently in the /var/lib/apt/lists directory.
 Please use the `cd` utility to change directory appropriately.
-'''
+```
 The specific directory path was mentioned in the above block which is /var/lib/apt/lists. I changed the directory using cd with this path and then invoked /challenge/run which yielded the flag.
 
 Flag link: pwn.college{cftv4x04OHWkQ-tSQzQA2HkCOzS.dZDN1QDL1YTN0czW}
