@@ -3,8 +3,25 @@
 This challenge required us to use this input redirection to write the word PWN (all uppercase) to the filename COLLEGE (all uppercase). I ran the command `echo PWN > COLLEGE` to redirect the word PWN to the file COLLEGE. This step yielded the flag.
 
 Flag link: pwn.college{w2ORS7e5fhxEIc3QG_YhFAWed72.dRjN1QDL1YTN0czW}
-## Challenge 2:
-This challenge required us to redirect the output of /challenge/run to the file myflag. So, I ran the command `/challenge/run >  myflag` which
+## Challenge 2: Redirecting more output
+This challenge required us to redirect the output of /challenge/run to the file myflag. So, I ran the command `/challenge/run >  myflag` which redirected the output of /challenge/run to myflag. This gave the following output:
+```
+[INFO] WELCOME! This challenge makes the following asks of you:
+[INFO] - the challenge will check that output is redirected to a specific file path : myflag
+[INFO] - the challenge will output a reward file if all the tests pass : /flag
+
+[HYPE] ONWARDS TO GREATNESS!
+
+[INFO] This challenge will perform a bunch of checks.
+[INFO] If you pass these checks, you will receive the /flag file.
+
+[TEST] You should have redirected my stdout to a file called myflag. Checking...
+
+[PASS] The file at the other end of my stdout looks okay!
+[PASS] Success! You have satisfied all execution requirements.
+```
+I finally ran the command `cat myflag` and got the flag.
+
 Flag link:  pwn.college{kR-3wBNCB2gOgyb_cnbNYVo2G0v.dVjN1QDL1YTN0czW}
 ## Challenge 3: Appending Output
 Thsi challenge required us to run /challenge/run with an append-mode to redirect the output to the file /home/hacker/the-flag. So, I ran the command `/challenge/run >> /home/hacker/the-flag` to redirect the output of /challenge/run to /home/hacker/the-flag. Here, I used >> to append the content. Then I ran the comman `cat /home/hacker/the-flag` which gave the following output: 
