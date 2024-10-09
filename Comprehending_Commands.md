@@ -52,7 +52,7 @@ to view the files. The files were : SPOILER-TRAPPED  chunk.h. So I ran the comma
 
 Flag link: pwn.college{ADUSgBVviQAGM7ndpn7WZN0pa9H.dljM4QDL1YTN0czW}
 ## Challenge 10: Making Directories
-This challenge required us to create a /tmp/pwn directory and make a college file in it. I ran the command cd /tmp to get into the temp directory. Then I ran the command mkdir /tmp/pwn to `create /tmp/pwn directory`. Then in order to make a college file I ran the command `touch /tmp/pwn/college`. Finally the /challenge/run command yielded the flag.
+This challenge required us to create a /tmp/pwn directory and make a college file in it. I ran the command cd /tmp to get into the temp directory. Then I ran the command `mkdir /tmp/pwn` to create /tmp/pwn directory. Then in order to make a college file I ran the command `touch /tmp/pwn/college`. Finally the /challenge/run command yielded the flag.
 
 Flag link: pwn.college{EgCyoTgLPNkS5KKzS4DfV0jCHuv.dFzM4QDL1YTN0czW}
 ## Challenge 11: Finding Flags
