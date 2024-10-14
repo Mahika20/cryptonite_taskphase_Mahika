@@ -1,4 +1,4 @@
-# Module 3: Shell Variables
+# Module 7: Shell Variables
 ## Challenge 1: Printing Variables
 In this challenge, the flag was put into a variable names "FLAG". We were required to make our shell print the flag. I ran the command: `echo $FLAG`. Here, echo is used to access and print the content of variable FLAG by prepending FLAG with $.
 ```
