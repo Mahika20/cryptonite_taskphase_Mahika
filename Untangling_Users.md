@@ -34,7 +34,7 @@ pwn.college{MbSSA94S7gXp0pewlTQs5WQCsDV.ddTN0UDL1YTN0czW}
 ```
 
 Flag link: pwn.college{MbSSA94S7gXp0pewlTQs5WQCsDV.ddTN0UDL1YTN0czW}
-## Challenge 4: Becoming the root with su
+## Challenge 4: Using sudo
 This challenge required us to use sudo to read the flag. I ran the command `sudo cat /flag` to run the command cat /flag as the root without switching to root. This gave the following output:
 ```
 hacker@users~using-sudo:~$ sudo cat /flag
