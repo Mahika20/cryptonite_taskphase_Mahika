@@ -16,7 +16,7 @@ pwn.college{MNpTKmDdQwARFb6_MxDyz7JMqKs.dZTN0UDL1YTN0czW}
 ```
 
 Flag link: pwn.college{MNpTKmDdQwARFb6_MxDyz7JMqKs.dZTN0UDL1YTN0czW}
-## Challenge 1: Becoming the root with su
+## Challenge 3: Cracking Passwords
 This challenge required us to crack the password from the file /challenge/shadow-leak and use the cracked password for authentication while switching to zardus user. I ran the command `john /challenge/shadow-leak` to load the password from the file /challenge/shadow-leak and John the ripper processed the hash and cracked the password. Then I ran the command `su zardus` to switch user to zardus and entered the cracked password for authentication. Finally, I ran `/challenge/run` to acccess the flag.
 ```
 hacker@users~cracking-passwords:~$ john /challenge/shadow-leak
