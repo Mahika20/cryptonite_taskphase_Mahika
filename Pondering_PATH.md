@@ -50,6 +50,25 @@ pwn.college{sboJ48LbxZhShyyI6bZnBglQ0tY.dZzNyUDL1YTN0czW}
 
 References: [Adding directories to PATH](https://unix.stackexchange.com/questions/462065/how-to-add-more-directiories-in-path)
 Flag link: pwn.college{sboJ48LbxZhShyyI6bZnBglQ0tY.dZzNyUDL1YTN0czW}
-## Challenge 4: Hijcaking Commands
+## Challenge 4: Hijacking Commands
+This challenge would delete the flag using the rm command but unlike before, it would not print anything. My plan was to create a new rm command in a separate directory which would run in place of the original rm command. I first decided to make a directory 'y' and ran the command `touch rm` to create a file rm in it. Then I ran the command `echo 'cat /flag'>rm` to redirect the command cat /flag to rm followed by ` PATH=$PATH:~/y` to add the new directory y to the existing directories in the PATH variable. Then I ran the command `chmod a+x rm` to make rm executable. In order to check which rm would be executed, I ran the command `which rm` : 
+```
+hacker@path~hijacking-commands:~/y$ which rm
+/run/workspace/bin/rm
+```
+I made an error as this was not the new rm command. So I ran the command `export PATH=~/y:$PATH as the path for the new rm should come before for it to be executed instead of the already existing one. 
+```
+hacker@path~hijacking-commands:~/y$ export PATH=~/y:$PATH
+hacker@path~hijacking-commands:~/y$ which rm
+/home/hacker/y/rm
+```
+Since this was the path of the new rm command, I finally ran the `/challenge/run` command and got the following output:
+```
+hacker@path~hijacking-commands:~/y$ /challenge/run
+Trying to remove /flag...
+Found 'rm' command at /home/hacker/y/rm. Executing!
+pwn.college{8JZB0xYhuXqOZI1gdJfAzZJ0mZz.ddzNyUDL1YTN0czW}
+```
 
-Flag link: 
+References: [Adding Directories to PATH](https://phoenixnap.com/kb/linux-add-to-path)
+Flag link: pwn.college{8JZB0xYhuXqOZI1gdJfAzZJ0mZz.ddzNyUDL1YTN0czW}
