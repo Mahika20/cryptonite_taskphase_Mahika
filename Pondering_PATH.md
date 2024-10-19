@@ -25,7 +25,7 @@ Here, I did not have to execute the program via its path as PATH was set to the 
 
 Flag link: pwn.college{owL45TzxmRofwx3IUHjmDIIRMRv.dVzNyUDL1YTN0czW}
 ## Challenge 3: Adding Commands
-This challenge required us to make a shell script called win, add its location to the PATH, and enable /challenge/run to find it. However, win command cannot cat the file if I overwrite PATH with the directory having win as cat command is also located in some directory in PATH. So, Icreated a file win in the default directory /home/hacker using `touch win`. I then ran the command `echo "cat /flag"> /home/hacker/win` to redirect the output of cat /flag to win command. Then I ran the command `chmod a+x /home/hacker/win` to make win executable. To set a PATH that has the old directories plus a new entry for where I created win, I ran the command ` PATH=$PATH:/home/hacker`. Finally, I ran the command ` /challenge/run` 
+This challenge required us to make a shell script called win, add its location to the PATH, and enable /challenge/run to find it. However, win command cannot cat the file if I overwrite PATH with the directory having win as cat command is also located in some directory in PATH. So, I created a file win in the default directory /home/hacker using `touch win`. I then ran the command `echo "cat /flag"> /home/hacker/win` to redirect the output of cat /flag to win command. Then I ran the command `chmod a+x /home/hacker/win` to make win executable. To set a PATH that has the old directories plus a new entry for where I created win, I ran the command ` PATH=$PATH:/home/hacker`. Finally, I ran the command ` /challenge/run` 
 ```
 hacker@path~adding-commands:~$ touch win
 hacker@path~adding-commands:~$ echo "cat /flag"> /home/hacker/win
