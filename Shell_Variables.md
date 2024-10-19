@@ -48,7 +48,7 @@ You've set the COLLEGE variable to the proper value
 ```
 
 Flag link: pwn.college{ArBt2bshWr8fO9SYb3TUxsS_X0k.dJjN1QDL1YTN0czW}
-## Challenge 5: Printing Eported Variables
+## Challenge 5: Printing Exported Variables
 This challenge required us to make use of the env command to print out every exported variable set in our shell. I ran the command `env` which gave the following output:
 ```
 SHELL=/run/dojo/bin/bash
@@ -71,7 +71,7 @@ Since the output was really long, I searched for the flag using the command `env
 
 Flag link: FLAG=pwn.college{QBbD0gP7HFyTGQeltMBiXYad1Qb.dhTN1QDL1YTN0czW}
 ## Challenge 6: Storing command Output
-This challenge required us to use command substitution to read the output of the /challenge/run command directly into a variable called PWN. We can use $() or `` to encase the command while assigning it to a variable, but backticks are not preffered as we cannot do nested command substitution with it. So, I ran the command `PWN=$(/challenge/run)`. It gave the output as follows:
+This challenge required us to use command substitution to read the output of the /challenge/run command directly into a variable called PWN. We can use $() or `` to encase the command while assigning it to a variable, but backticks are not preferred as we cannot do nested command substitution with it. So, I ran the command `PWN=$(/challenge/run)`. It gave the output as follows:
 ```
 hacker@variables~storing-command-output:~$ PWN=$(/challenge/run)
 Congratulations! You have read the flag into the PWN variable. Now print it out 
