@@ -54,9 +54,6 @@ password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ## Level 6 → Level 7
 In this level the password for the next level was stored somewhere on the server and had all of the following properties: owned by user bandit7, owned by group bandit6, 33 bytes in size.
 
-owned by user bandit7
-owned by group bandit6
-33 bytes in size
 password:
 ## Level 7 → Level 8
 password:
