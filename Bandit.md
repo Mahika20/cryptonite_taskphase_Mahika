@@ -22,15 +22,13 @@ password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 ## Level 3 → Level 4
 password: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ## Level 4 → Level 5
-password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
-## Level 5 → Level 6
 I ran the command `cd inhere` followed by `ls` to list the files in inhere directory.
 ```
 bandit4@bandit:~$ cd inhere
 bandit4@bandit:~/inhere$ ls
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
 ```
-Since only one of them was in human readable form, I ran the command `file ./*` to check the  file type for all the files.
+Since only one of them was in human readable form, I ran the command `file ./*c` to check the  file type for all the files.
 ```
 bandit4@bandit:~/inhere$ file ./*
 ./-file00: data
@@ -47,9 +45,18 @@ bandit4@bandit:~/inhere$ file ./*
 Then I catted ./-file07 to get the password.
 
 reference: [File type of files in a directory](https://www.hostinger.in/tutorials/linux-file-command/)
-password:
+password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+## Level 5 → Level 6
+In this level the password for the next level was stored in a file somewhere under the inhere directory and had all of the following properties:
+human-readable, 1033 bytes in size and not executable. I ran the command `find . -type f -size 1033c -exec cat {} \;`. Here, find command searches for a file of size 1033 bytes in the current directory, and executes cat command on every meeting the criteria.
 
+password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ## Level 6 → Level 7
+In this level the password for the next level was stored somewhere on the server and had all of the following properties: owned by user bandit7, owned by group bandit6, 33 bytes in size.
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
 password:
 ## Level 7 → Level 8
 password:
